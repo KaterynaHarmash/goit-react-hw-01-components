@@ -1,16 +1,17 @@
+import user from "./user.json";
+import { UserInfo } from "./user_profile/Profile";
+import { GlobalStyle } from "./GlobalStyle";
 export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
+        minHeight: '100vh'
       }}
-    >
-      React homework template
+    ><GlobalStyle />
+      <UserInfo user={user}/>
     </div>
   );
 };

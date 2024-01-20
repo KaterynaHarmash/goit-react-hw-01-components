@@ -1,29 +1,29 @@
 import { ProfileCard, Avatar, UserDescription, UserName, UserTag, Location, StatsList, StatsListItem, StatsName, StatsValue } from "./Profile.styled";
 
-export const UserInfo = ({ user }) => {
+export const Profile = ({ username, tag, location, avatar, stats }) => {
     return <ProfileCard>
   <UserDescription>
     <Avatar
-        src={user.avatar}
-        alt={user.username}
+        src={avatar}
+        alt={username}
     />
-    <UserName>{user.username}</UserName>
-    <UserTag>@{user.tag}</UserTag>
-    <Location>{user.location}</Location>
+    <UserName>{username}</UserName>
+    <UserTag>@{tag}</UserTag>
+    <Location>{location}</Location>
   </UserDescription>
 
   <StatsList>
     <StatsListItem>
       <StatsName>Followers</StatsName>
-      <StatsValue>{user.stats.followers}</StatsValue>
+      <StatsValue>{stats.followers}</StatsValue>
     </StatsListItem>
     <StatsListItem>
       <StatsName>Views</StatsName>
-      <StatsValue>{user.stats.views}</StatsValue>
+      <StatsValue>{stats.views}</StatsValue>
     </StatsListItem>
     <StatsListItem>
       <StatsName>Likes</StatsName>
-      <StatsValue>{user.stats.likes}</StatsValue>
+      <StatsValue>{stats.likes}</StatsValue>
     </StatsListItem>
   </StatsList>
 </ProfileCard>

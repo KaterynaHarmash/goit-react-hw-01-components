@@ -1,12 +1,14 @@
 import user from "./path/to/user.json";
 import data from './path/to/data.json';
 import friends from './path/to/friends.json';
+import transactions from './path/to/transactions.json';
 
 import { GlobalStyle } from "./GlobalStyle";
 
 import {Profile } from "./user_profile/Profile";
 import { Statistics } from "./statistics/Statistics";
 import { FriendList } from "./friendlist/FriendList";
+import { TransactionHistory } from "./transactionsHistory/TransactionsHistory"
 
 export const App = () => {
   return (
@@ -18,6 +20,7 @@ export const App = () => {
         alignItems: 'center',
         minHeight: '100vh',
         gap: '30px',
+        padding: "50px"
       }}
     ><GlobalStyle />
       <Profile
@@ -30,6 +33,7 @@ export const App = () => {
       <Statistics title="Upload stats" stats={data} />
       <Statistics stats={data} />
       <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </div>
   );
 };

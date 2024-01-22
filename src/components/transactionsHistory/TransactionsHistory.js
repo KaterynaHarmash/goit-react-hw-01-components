@@ -1,5 +1,4 @@
-import { TransactionRows } from "./TransactionsRows"
-import { TransactionsHistoryHeader, TransactionsTable, } from "./TransactionsHistory.styled"
+import { TransactionsHistoryHeader, TransactionsTable, TransactionsCol, TransactionsRow } from "./TransactionsHistory.styled"
 export const TransactionHistory = ({ items }) => {
     return <TransactionsTable>
         <thead>
@@ -10,7 +9,12 @@ export const TransactionHistory = ({ items }) => {
             </tr>
         </thead>
         <tbody>
-            <TransactionRows items={ items } />
+            {items.map(({id,type,amount,currency}) =><TransactionsRow key={id}>
+                    <TransactionsCol>{type}</TransactionsCol>
+                    <TransactionsCol>{amount}</TransactionsCol>
+                    <TransactionsCol>{currency}</TransactionsCol>
+                </TransactionsRow>
+            )}
         </tbody>
     </TransactionsTable>
     

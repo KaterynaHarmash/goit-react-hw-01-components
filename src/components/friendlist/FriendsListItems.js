@@ -1,10 +1,9 @@
 import { FriendItem, FriendStatus, Avatar, Name } from "./FriendList.styled"
 
-export const Friends = ({ data }) => {
-
-    return data.map(friend => <FriendItem key={friend.id}>
-            <FriendStatus $status={friend.isOnline}>{friend.isOnline}</FriendStatus>
-            <Avatar src={friend.avatar} alt={friend.name} width="48" />
-            <Name>{friend.name}</Name>
-        </FriendItem>)
+export const FriendListItem = ({id,isOnline,avatar,name}) => {
+    return <FriendItem>
+            <FriendStatus $status={isOnline}></FriendStatus>
+            <Avatar src={avatar} alt={name} width="48" />
+            <Name>{name}</Name>
+        </FriendItem>
 }

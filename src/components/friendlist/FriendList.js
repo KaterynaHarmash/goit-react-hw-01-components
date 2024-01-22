@@ -1,8 +1,8 @@
 import { ListOfFriends } from "./FriendList.styled";
-import { Friends } from "./FriendsListItems";
+import { FriendListItem } from "./FriendsListItems";
 export const FriendList = ({ friends }) => {
     
     return <ListOfFriends>
-        <Friends data={ friends } />
+        {friends.map(({avatar,name,isOnline,id}) =><FriendListItem key={id} isOnline={ isOnline } avatar={ avatar } name={ name }/>)}
     </ListOfFriends>
  }

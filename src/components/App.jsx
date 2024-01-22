@@ -5,10 +5,10 @@ import transactions from '../path/to/transactions.json';
 
 import { GlobalStyle } from "./GlobalStyle";
 
-import {Profile } from "./user_profile/Profile";
-import { Statistics } from "./statistics/Statistics";
-import { FriendList } from "./friendlist/FriendList";
-import { TransactionHistory } from "./transactionsHistory/TransactionsHistory"
+import {Profile } from "./Profile/Profile";
+import { Statistics } from "./Statistics/Statistics";
+import { FriendList } from "./Friendlist/FriendList";
+import { TransactionHistory } from "./TransactionsHistory/TransactionsHistory"
 
 export const App = () => {
   return (

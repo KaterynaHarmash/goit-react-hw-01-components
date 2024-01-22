@@ -5,8 +5,8 @@ import transactions from '../path/to/transactions.json';
 
 import { GlobalStyle } from "./GlobalStyle";
 
-import {Profile } from "./Profile/Profile.js";
-import { Statistics } from "./Statistics/Statistics";
+import {Profile } from "./Profile/Profile";
+import { Statistics } from "Statistics/Statistics";
 import { FriendList } from "./Friendlist/FriendList.js";
 import { TransactionHistory } from "./TransactionsHistory/TransactionsHistory.js"
 

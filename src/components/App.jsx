@@ -7,7 +7,7 @@ import { GlobalStyle } from "./GlobalStyle";
 
 import { Profile } from "./Profile/Profile.js";
 import { Statistics } from "./Statistics/Statistics.js";
-import { FriendList } from "./Friendlist/FriendList.js";
+import { FriendList } from "./FriendList/FriendList.js";
 import { TransactionHistory } from "./TransactionsHistory/TransactionsHistory.js"
 
 export const App = () => {

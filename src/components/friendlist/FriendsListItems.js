@@ -1,6 +1,6 @@
 import { FriendItem, FriendStatus, Avatar, Name } from "./FriendList.styled"
 
-export const FriendListItem = ({id,isOnline,avatar,name}) => {
+export const FriendListItem = ({isOnline,avatar,name}) => {
     return <FriendItem>
             <FriendStatus $status={isOnline}></FriendStatus>
             <Avatar src={avatar} alt={name} width="48" />
